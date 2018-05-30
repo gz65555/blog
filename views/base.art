@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{block 'title'}}Layout{{/block}}</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/iconfont/material-icons.css">
+</head>
+<body>
+<header id="header" class="header">
+  <div class="category" onclick="triggerSide()">
+    <i class="material-icons" style="color: white">
+      list
+    </i>
+  </div>
+  <div></div>
+  <a class="home-link" href="#">evilp's home</a>
+</header>
+<div onclick="contentClick()" id="content" class="wrapper">
+  <div class="intro">
+    <div class="top-bg" style="background-image: url('imgs/index-bg.jpg')"></div>
+    <h1>ARTTEMP.</h1>
+    <p>it's better to burn out than to fade away</p>
+  </div>
+  <div class="container">
+    {{block 'content'}}{{/block}}
+  </div>
+</div>
+<div class="sidebar sidebar-hide" id="side">
+
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.js"></script>
+<script>
+  const side = $('#side')
+  const content = $('#content')
+  const header = $('#header')
+  let sideShow = false;
+
+  function triggerSide() {
+    if (sideShow) {
+      hideSider();
+    } else {
+      showSider();
+    }
+  }
+
+  function contentClick() {
+    if(sideShow) {
+      hideSider();
+    }
+  }
+
+  function showSider() {
+    side.removeClass('sidebar-hide')
+    side.addClass('sidebar-active')
+    content.addClass('content-active')
+    header.addClass('content-active')
+    sideShow = true;
+  }
+
+  function hideSider() {
+    side.removeClass('sidebar-active')
+    side.addClass('sidebar-hide')
+    content.removeClass('content-active')
+    header.removeClass('content-active')
+    sideShow = false;
+  }
+</script>
+</body>
+</html>

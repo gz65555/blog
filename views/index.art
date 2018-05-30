@@ -1,0 +1,54 @@
+{{extend './base.art'}}
+{{block 'title'}}hello{{/block}}
+{{block 'content'}}
+<main class="main">
+    <article class="index-post">
+        <a class="abstract-title" href="#">
+            <span>hexo-theme-archer</span>
+        </a>
+        <div class="abstract-content">
+            安装及使用方法见GitHub地址: 戳我:)
+            帮助如果有任何使用上的问题或者疑问，欢迎留言
+            感谢使用😆
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calender">
+                    <i class="material-icons">date_range</i>
+                </span>
+                <span class="abstract-time">2017/08/14</span>
+            </div>
+            <!-- tags  -->
+            <div class="abstract-tags">
+                <a class="post-tag" href="#" data-tags="hexo">hexo</a>
+                <a class="post-tag" href="#" data-tags="hexo-theme-archer">hexo-theme-archer</a>
+            </div>
+        </div>
+    </article>
+    <article class="index-post">
+        <a class="abstract-title" href="#">
+            <span>hexo-theme-archer</span>
+        </a>
+        <div class="abstract-content">
+            安装及使用方法见GitHub地址: 戳我:)
+            帮助如果有任何使用上的问题或者疑问，欢迎留言
+            感谢使用😆
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calender">
+                    <i class="material-icons">date_range</i>
+                </span>
+                <span class="abstract-time">2017/08/14</span>
+            </div>
+            <!-- tags  -->
+            <div class="abstract-tags">
+                <a class="post-tag" href="#" data-tags="hexo">hexo</a>
+                <a class="post-tag" href="#" data-tags="hexo-theme-archer">hexo-theme-archer</a>
+            </div>
+        </div>
+    </article>
+</main>
+{{/block}}
