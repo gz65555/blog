@@ -1,0 +1,8 @@
+{{extend './base.art'}}
+{{block 'title'}}hello{{/block}}
+{{block 'intro'}}
+
+{{/block}}
+{{block 'content'}}
+
+{{/block}}

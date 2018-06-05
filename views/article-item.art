@@ -1,24 +1,24 @@
-<main class="main">
-    <article class="index-post">
-        <a class="abstract-title" href="#">
-            <span>data.title</span>
-        </a>
-        <div class="abstract-content">
-            data.simContent
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
+<article class="index-post">
+    <a class="abstract-title" href="#">
+        <span>{{title}}</span>
+    </a>
+    <div class="abstract-content">
+        <!--{{content}}-->
+    </div>
+    <div class="abstract-post-meta">
+        <!-- date  -->
+        <div class="abstract-date">
                 <span class="abstract-calender">
                     <i class="material-icons">date_range</i>
                 </span>
-                <span class="abstract-time">data.date</span>
-            </div>
-            <!-- tags  -->
-            <div class="abstract-tags">
-                <a class="post-tag" href="#">data.tags[0]</a>
-                <!--<a class="post-tag" href="#">data.tags[1]</a>-->
-            </div>
+            <span class="abstract-time">{{simDate}}</span>
         </div>
-    </article>
-</main>
+        <!-- tags  -->
+        <div class="abstract-tags">
+            {{each tags}}
+            <a class="post-tag" href="#">{{$value}}</a>
+            {{/each}}
+            <!--<a class="post-tag" href="#">data.tags[1]</a>-->
+        </div>
+    </div>
+</article>

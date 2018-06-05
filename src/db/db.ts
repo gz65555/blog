@@ -3,12 +3,10 @@
  */
 import * as mongoose from 'mongoose';
 import config from './../config/db.config'
-import {dao, model} from "./index";
-import {findUserByUnionId} from "./dao/user.dao";
 
 
 export async function connect() {
-  // await mongoose.connect('mongodb://localhost/word', config);
+  await mongoose.connect('mongodb://localhost/blog', config);
   // const res = await dao.user.findUserByUnionId('husongggg')
   // console.log(res)
 }

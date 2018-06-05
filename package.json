@@ -29,7 +29,8 @@
     "koa-router": "^7.4.0",
     "koa-static": "^4.0.3",
     "material-design-icons": "^3.0.1",
-    "mongoose": "^5.0.10"
+    "mongoose": "^5.0.10",
+    "string-to-dom": "^0.1.5"
   },
   "devDependencies": {
     "nyc": "^11.6.0",

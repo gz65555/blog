@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{{block 'title'}}Layout{{/block}}</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_689787_e9dlijs5m6fj38fr.css">
   <link rel="stylesheet" href="css/iconfont/material-icons.css">
 </head>
 <body>
@@ -19,11 +20,7 @@
   <a class="home-link" href="#">evilp's home</a>
 </header>
 <div onclick="contentClick()" id="content" class="wrapper">
-  <div class="intro">
-    <div class="top-bg" style="background-image: url('imgs/index-bg.jpg')"></div>
-    <h1>ARTTEMP.</h1>
-    <p>it's better to burn out than to fade away</p>
-  </div>
+  {{block 'intro'}}{{/block}}
   <div class="container">
     {{block 'content'}}{{/block}}
   </div>
@@ -31,7 +28,7 @@
 <div class="sidebar sidebar-hide" id="side">
 
 </div>
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script>
   const side = $('#side')
   const content = $('#content')

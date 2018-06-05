@@ -2,8 +2,7 @@
  * Created by husong on 18/03/2018.
  */
 import * as Router from 'koa-router'
-import * as user from './user.controller'
-import * as home from './home.controller'
+import * as home from "./home.controller";
 
 export const router = new Router()
 export const protectRouter = new Router()
@@ -18,11 +17,12 @@ export const unprotectRouter = new Router()
 // protectRouter.delete('/word', needUserMiddleware(), word.deleteWordFromNotebook)
 //
 // //无需是认证用户即可的操作
-unprotectRouter.post('/login', user.login)
+// unprotectRouter.post('/login', user.login)
 // unprotectRouter.get('/word', word.getAllWordsFromNotebook)
 // unprotectRouter.get('/word/:word', word.findWord)
 
 router.get('/', home.home)
+router.get('/pages', home.pages)
 
 // router.use('/api', protectRouter.routes(), protectRouter.allowedMethods())
 // router.use('/api', unprotectRouter.routes(), unprotectRouter.allowedMethods())

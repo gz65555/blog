@@ -1,54 +1,49 @@
 {{extend './base.art'}}
 {{block 'title'}}hello{{/block}}
+{{block 'intro'}}
+<div class="intro">
+    <div class="top-bg" style="background-image: url('imgs/index-bg.jpg')"></div>
+    <h1>ARTTEMP.</h1>
+    <p>it's better to burn out than to fade away</p>
+</div>
+{{/block}}
 {{block 'content'}}
 <main class="main">
-    <article class="index-post">
-        <a class="abstract-title" href="#">
-            <span>hexo-theme-archer</span>
-        </a>
-        <div class="abstract-content">
-            安装及使用方法见GitHub地址: 戳我:)
-            帮助如果有任何使用上的问题或者疑问，欢迎留言
-            感谢使用😆
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calender">
-                    <i class="material-icons">date_range</i>
-                </span>
-                <span class="abstract-time">2017/08/14</span>
-            </div>
-            <!-- tags  -->
-            <div class="abstract-tags">
-                <a class="post-tag" href="#" data-tags="hexo">hexo</a>
-                <a class="post-tag" href="#" data-tags="hexo-theme-archer">hexo-theme-archer</a>
-            </div>
-        </div>
-    </article>
-    <article class="index-post">
-        <a class="abstract-title" href="#">
-            <span>hexo-theme-archer</span>
-        </a>
-        <div class="abstract-content">
-            安装及使用方法见GitHub地址: 戳我:)
-            帮助如果有任何使用上的问题或者疑问，欢迎留言
-            感谢使用😆
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calender">
-                    <i class="material-icons">date_range</i>
-                </span>
-                <span class="abstract-time">2017/08/14</span>
-            </div>
-            <!-- tags  -->
-            <div class="abstract-tags">
-                <a class="post-tag" href="#" data-tags="hexo">hexo</a>
-                <a class="post-tag" href="#" data-tags="hexo-theme-archer">hexo-theme-archer</a>
-            </div>
-        </div>
-    </article>
+    {{each data}}
+        {{include './article-item' $value}}
+    {{/each}}
+    <nav id="pages" class="page-nav">
+        <% if (page > 1) {%>
+            <a class="page-number" href="/?page=<%=page - 1%>">PREV</a>
+        <%}%>
+        <% for(var i = page - 2; i < page + 3; i++){ %>
+            <% if (i >= 1 && i <= total) { %>
+                <% if (i != page) { %>
+                    <a class="page-number" href="/?page=<%=i%>"><%=i%></a>
+                <% } else { %>
+                    <span class="page-current"><%=i%></span>
+                <% }%>
+            <%}%>
+        <% } %>
+        <% if (page < total) {%>
+            <a class="page-number" href="/?page=<%=page + 1%>">NEXT</a>
+        <%}%>
+    </nav>
 </main>
+<div class="profile">
+    <img class="portrait" src="/imgs/head.jpg">
+    <div class="profile-name">name</div>
+    <div class="profile-signature">witness me</div>
+    <div class="profile-social">
+        <a href="#">
+            <i class="icon iconfont icon-mail"></i>
+        </a>
+        <a href="#">
+            <i class="icon iconfont icon-github"></i>
+        </a>
+        <a href="#">
+            <i class="icon iconfont icon-wechat"></i>
+        </a>
+    </div>
+</div>
 {{/block}}

@@ -1,0 +1,25 @@
+<!--<link rel="stylesheet" href="css/style.css">-->
+<nav id="pages" class="page-nav">
+
+</nav>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  function getValue(url, name) {
+    const reg = new RegExp('(\\?|&)' + name + '=([^&?]*)', 'i');
+    const arr = url.match(reg);
+
+    if (arr) {
+      return arr[2];
+    }
+
+    return null;
+  }
+
+  let page = getValue(location.href, 'page')
+  if (!page) {
+    page = 1
+  }
+  $.get('/pages', (data) => {
+    $('#pages').append(data)
+  })
+</script>
