@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>hello</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_689787_e9dlijs5m6fj38fr.css">
+  <link rel="stylesheet" href="css/iconfont/material-icons.css">
+</head>
+<body>
+<header id="header" class="header">
+  <div class="category" onclick="triggerSide()">
+    <i class="material-icons" style="color: white">
+      list
+    </i>
+  </div>
+  <div></div>
+  <a class="home-link" href="#">evilp's home</a>
+</header>
+<div onclick="contentClick()" id="content" class="wrapper">
+  
+
+
+  <div class="container">
+    
+<h1>听写单词项目服务器</h1>
+<h2>技术栈</h2>
+<ul>
+<li>koa2 （服务器）</li>
+<li>koa-router （路由）</li>
+<li>koa-bodyparser （body解析）</li>
+<li>jsonwebtoken （基于token）</li>
+<li>mongoose（ODM框架）</li>
+<li>mongodb（数据库）</li>
+</ul>
+<h2>主要功能</h2>
+<ul>
+<li>单词
+<ul>
+<li>查询单词</li>
+<li>添加单词进单词本</li>
+<li>删除单词本里的单词</li>
+</ul>
+</li>
+<li>单词本
+<ul>
+<li>添加单词本</li>
+<li>删除单词本</li>
+<li>修改单词本名称</li>
+<li>对单词本进行听写</li>
+</ul>
+</li>
+<li>账户管理
+<ul>
+<li>使用微信登录</li>
+<li>使用微博登录</li>
+<li>绑定邮箱</li>
+<li>修改绑定邮箱</li>
+</ul>
+</li>
+<li>设置
+<ul>
+<li>修改单词间的间隔时间</li>
+</ul>
+</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="sidebar sidebar-hide" id="side">
+
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  const side = $('#side')
+  const content = $('#content')
+  const header = $('#header')
+  let sideShow = false;
+
+  function triggerSide() {
+    if (sideShow) {
+      hideSider();
+    } else {
+      showSider();
+    }
+  }
+
+  function contentClick() {
+    if(sideShow) {
+      hideSider();
+    }
+  }
+
+  function showSider() {
+    side.removeClass('sidebar-hide')
+    side.addClass('sidebar-active')
+    content.addClass('content-active')
+    header.addClass('content-active')
+    sideShow = true;
+  }
+
+  function hideSider() {
+    side.removeClass('sidebar-active')
+    side.addClass('sidebar-hide')
+    content.removeClass('content-active')
+    header.removeClass('content-active')
+    sideShow = false;
+  }
+</script>
+</body>
+</html>

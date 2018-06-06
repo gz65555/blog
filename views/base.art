@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{block 'title'}}Layout{{/block}}</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_689787_e9dlijs5m6fj38fr.css">
-  <link rel="stylesheet" href="css/iconfont/material-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{block 'title'}}Layout{{/block}}</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_689787_e9dlijs5m6fj38fr.css">
+    <link rel="stylesheet" href="css/iconfont/material-icons.css">
 </head>
 <body>
 <header id="header" class="header">
-  <div class="category" onclick="triggerSide()">
-    <i class="material-icons" style="color: white">
-      list
-    </i>
-  </div>
-  <div></div>
-  <a class="home-link" href="#">evilp's home</a>
+    <div class="category" onclick="triggerSide()">
+        <i class="material-icons" style="color: white">
+            list
+        </i>
+    </div>
+    <div></div>
+    <a class="home-link" href="#">evilp's home</a>
 </header>
 <div onclick="contentClick()" id="content" class="wrapper">
-  {{block 'intro'}}{{/block}}
-  <div class="container">
-    {{block 'content'}}{{/block}}
-  </div>
+    {{block 'intro'}}{{/block}}
+    <div class="container">
+        {{block 'content'}}{{/block}}
+    </div>
 </div>
 <div class="sidebar sidebar-hide" id="side">
 
 </div>
+<footer>
+    <div>
+        浙ICP备18011248号-1
+    </div>
+</footer>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script>
   const side = $('#side')
@@ -44,7 +49,7 @@
   }
 
   function contentClick() {
-    if(sideShow) {
+    if (sideShow) {
       hideSider();
     }
   }

@@ -1,8 +1,17 @@
 {{extend './base.art'}}
-{{block 'title'}}hello{{/block}}
+{{block 'title'}}gg{{/block}}
 {{block 'intro'}}
-
+<div class="intro">
+    <div class="top-bg" style="background-image: url('imgs/index-bg.jpg')"></div>
+    <h1>ARTTEMP.</h1>
+    <p>it's better to burn out than to fade away</p>
+</div>
 {{/block}}
 {{block 'content'}}
-
+<link rel="stylesheet" href="css/markdown.css">
+<main class="main main-post">
+    <article class="markdown-body">
+        $$content$$
+    </article>
+</main>
 {{/block}}

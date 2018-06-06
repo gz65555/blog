@@ -3,6 +3,7 @@
  */
 import * as Router from 'koa-router'
 import * as home from "./home.controller";
+import * as article from "./article.controller";
 
 export const router = new Router()
 export const protectRouter = new Router()
@@ -23,6 +24,7 @@ export const unprotectRouter = new Router()
 
 router.get('/', home.home)
 router.get('/pages', home.pages)
+router.get('/article', article.article)
 
 // router.use('/api', protectRouter.routes(), protectRouter.allowedMethods())
 // router.use('/api', unprotectRouter.routes(), unprotectRouter.allowedMethods())
