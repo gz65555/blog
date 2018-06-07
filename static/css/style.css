@@ -248,6 +248,10 @@ body {
     padding: 0.5rem 0;
 }
 
+.profile-social a i:hover {
+    color: #d73a49;
+}
+
 .profile-social a {
     color: black;
     margin-right: 0.4rem;

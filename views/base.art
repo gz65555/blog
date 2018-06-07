@@ -17,7 +17,7 @@
         </i>
     </div>
     <div></div>
-    <a class="home-link" href="#">evilp's home</a>
+    <a class="home-link" href="/">evilp's home</a>
 </header>
 <div onclick="contentClick()" id="content" class="wrapper">
     {{block 'intro'}}{{/block}}
