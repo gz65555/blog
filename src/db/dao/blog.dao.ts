@@ -12,6 +12,18 @@ export async function addBlog(title: string, content: string, tags: Array<any>) 
   return blog.save();
 }
 
+export async function getPostById(id: number) {
+  return new Promise((resolve, reject) => {
+    Blog.findById(id, ((err, res) => {
+      if (err) {
+        reject(err)
+      } else {
+        resolve(res)
+      }
+    }))
+  })
+}
+
 export async function getAllTags() {
   return new Promise((resolve, reject) => {
     Blog.distinct('tags', function (err, res) {

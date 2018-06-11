@@ -1,4 +1,17 @@
-# 听写单词项目服务器
+# 个人博客项目
+
+##命令
+
+```shell
+#安装依赖
+npm install
+#启动
+npm start
+#构建(todo)
+npm run build
+#编译markdown
+npm run build:md
+```
 
 ## 技术栈
 
@@ -8,22 +21,16 @@
 - jsonwebtoken （基于token）
 - mongoose（ODM框架）
 - mongodb（数据库）
+- arttemplate（模板引擎）
 
-## 主要功能
+## Markdown编写规则
 
-- 单词
-  - 查询单词
-  - 添加单词进单词本
-  - 删除单词本里的单词
-- 单词本
-  - 添加单词本
-  - 删除单词本
-  - 修改单词本名称
-  - 对单词本进行听写
-- 账户管理
-  - 使用微信登录
-  - 使用微博登录
-  - 绑定邮箱
-  - 修改绑定邮箱
-- 设置
-  - 修改单词间的间隔时间
+markdown文件存放在md文件夹中，采用title&&date&&tag,tag...方式命名
+
+使用 `npm run build:md`把md文件编译并写入mongodb中。
+
+## 路线图
+
+- 展示首页
+- 链接到文章
+- 根据标签查找文章

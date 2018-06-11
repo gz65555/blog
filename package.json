@@ -8,6 +8,7 @@
   "description": "learn English",
   "scripts": {
     "build": "tsc",
+    "build:md": "ts-node scripts/build.md.ts",
     "start": "ts-node src/app.ts",
     "test": "nyc --reporter=text mocha --recursive"
   },

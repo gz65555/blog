@@ -25,6 +25,7 @@ export const unprotectRouter = new Router()
 router.get('/', home.home)
 router.get('/pages', home.pages)
 router.get('/article', article.article)
+router.get('/article/:id', article.getArticle)
 
 // router.use('/api', protectRouter.routes(), protectRouter.allowedMethods())
 // router.use('/api', unprotectRouter.routes(), unprotectRouter.allowedMethods())
