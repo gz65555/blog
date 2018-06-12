@@ -3,12 +3,22 @@
  */
 import {Blog} from "../";
 
-export async function addBlog(title: string, content: string, tags: Array<any>) {
-  const blog = new Blog({
-    title,
-    content,
-    tags
-  })
+export async function addBlog(title: string, content: string, tags: Array<any>, date?: Date) {
+  let blog;
+  if (date) {
+    blog = new Blog({
+      title,
+      content,
+      tags,
+      date
+    })
+  } else {
+    blog = new Blog({
+      title,
+      content,
+      tags
+    })
+  }
   return blog.save();
 }
 

@@ -5,7 +5,7 @@ import * as db from '../db';
 import {ResultUtil} from "../utils/result.util";
 
 export async function postBlog(title: string, content: string, tags: Array<string>, date?: Date) {
-
+  return await db.addBlog(title, content, tags, date)
 }
 
 export async function getBlogsByPage(page: number = 1) {
