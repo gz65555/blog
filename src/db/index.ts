@@ -7,7 +7,7 @@
 // import * as _dao from './dao'
 import {connect} from './db'
 //
-connect()
+// connect()
 //
 // export const Notebook = n;
 // export const Word = w;

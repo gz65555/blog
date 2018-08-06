@@ -9,7 +9,7 @@ import {service} from "../src/service";
 
 mongoose.connect('mongodb://localhost/blog', config).then(connection => {
   parseMarkdown().then(()=>{
-    //todo disconnect
+    mongoose.connection.close();
   });
 });
 
